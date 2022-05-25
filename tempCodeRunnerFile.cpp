@@ -1,1 +1,1 @@
-    // Laksshay.name = "laksshay";
+    // cout << *ptr << " " << *(++ptr) << endl;

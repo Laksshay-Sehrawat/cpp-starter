@@ -15,6 +15,13 @@ int main()
     // cout << &arr[1] << endl;
     // cout << "size of int is " << ((&arr[1]) - (&arr[0])) << endl;
     // // why is the answer not 4?
+    cout << "Hello"
+         << "world";
+    ;
+    ;
+    ;
+    ;
+    return 0;
 }
 
 void move(int n, char src, char des, char aux)

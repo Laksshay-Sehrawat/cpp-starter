@@ -1,1 +1,1 @@
-    // cout << *ptr << " " << *(++ptr) << endl;
+            // printf(" ");

@@ -15,7 +15,7 @@ int main()
     cin.get(laksshay.name, 50);
     cout << "age do ";
     cin >> laksshay.age;
-    cout << "salary dede ";
+    cout << "salary ";
     cin >> laksshay.salary;
     display_data(laksshay);
 }

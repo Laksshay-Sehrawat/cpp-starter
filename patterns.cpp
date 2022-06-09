@@ -2,18 +2,25 @@
 using namespace std;
 int main()
 {
-    int row = 1, col = 1, n, var = 1;
-    cout << "enter the number of rows - ";
+    int row = 1, n, col = 1;
+    cout << "enter a number bb - ";
+    // int count = n;
     cin >> n;
     while (row <= n)
     {
-        col = 1;
-        while (col <= n)
+        int col = 1;
+        while (col <= (row))
         {
-            char ch = 'A' + var - row;
-            cout << ch;
+            cout << " ";
             col += 1;
-            var += 1;
+        }
+        col = 1;
+        int count = col + row - 1;
+        while (col <= (n - row + 1))
+        {
+            cout << count;
+            count += 1;
+            col += 1;
         }
         cout << endl;
         row += 1;

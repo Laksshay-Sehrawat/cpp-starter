@@ -1,20 +1,45 @@
 #include <iostream>
 #include <math.h>
 using namespace std;
+int getmax(int arr[], int size)
+{
+    int max = arr[0];
+    int min = arr[0];
+    for (int i = 0; i < size; i++)
+    {
+        if (arr[i] > max)
+        {
+            max = arr[i];
+        }
+        if (arr[i] < min)
+        {
+            min = arr[i];
+        }
+    }
+    return min;
+}
+
+int reverse(int arr[], int size)
+{
+    for (int i = 0; i < (size / 2); i++)
+    {
+        int temp = arr[i];
+        arr[i] = arr[size - i - 1];
+        arr[size - i - 1] = temp;
+    }
+    for (int i = 0; i < size; i++)
+    {
+        cout << arr[i] << " ";
+    }
+}
 int main()
 {
-    int n;
-    cout << "enter the number for which you need binary representation - ";
-    cin >> n;
-    int temp = n;
-    int power = 0;
-    int number = 0;
-    while (temp)
+    int arr[5];
+    // array input
+    cout << "enter the elements - ";
+    for (int i = 0; i < 5; i++)
     {
-        int bit = temp & 1;
-        temp = temp >> 1;
-        number += (bit * pow(10, power));
-        ++power;
+        cin >> arr[i];
     }
-    cout << "the number is " << number << endl;
+    reverse(arr, 5);
 }

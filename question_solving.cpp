@@ -31,6 +31,7 @@ int reverse(int arr[], int size)
     {
         cout << arr[i] << " ";
     }
+    cout << endl;
 }
 int main()
 {

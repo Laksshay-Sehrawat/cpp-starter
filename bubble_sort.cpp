@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-int bubble(int arr[], int size)
+void bubble(int arr[], int size)
 {
     for (int i = 0; i < size; i++)
     {
@@ -13,7 +13,7 @@ int bubble(int arr[], int size)
         }
     }
 }
-int insertion(int arr[], int size)
+void insertion(int arr[], int size)
 {
     for (int i = 1; i < size; i++)
     {
@@ -33,30 +33,34 @@ int insertion(int arr[], int size)
         arr[j + 1] = current;
     }
 }
-class animals
+void selection(int arr[], int size)
 {
-public:
-    int age;
-    int hunger = 40;
-    void give_food()
+    for (int i = 0; i < size; i++)
     {
-        hunger += 20;
-        cout << "eating\n";
+        int curr = arr[i];
+        int j;
+        for (j = i + 1; j < size; j++)
+        {
+            if (arr[j] < curr)
+            {
+                curr = arr[j];
+            }
+        }
+        swap(arr[0], arr[j]);
+        for (int k = 0; k < size; i++)
+        {
+            cout << arr[i] << " ";
+        }
     }
-};
-
+}
 int main()
 {
-    int arr[5] = {10, 4, 6, 2, 5};
-    insertion(arr, 5);
-    for (int i = 0; i < 5; i++)
+    int arr[] = {10, 4, 6, 2, 5, 35, 46, 23, 1, 52, 56, 23, 654};
+    int size = sizeof(arr) / sizeof(int);
+    insertion(arr, size);
+    for (int i = 0; i < size; i++)
     {
         cout << arr[i] << " ";
     }
     cout << "\n";
-    animals shawn;
-    shawn.age = 5;
-    shawn.give_food();
-    shawn.give_food();
-    cout << "age is - " << shawn.age << " current hunger - " << shawn.hunger << endl;
 }

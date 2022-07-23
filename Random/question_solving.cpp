@@ -33,6 +33,12 @@ int reverse(int arr[], int size)
     }
     cout << endl;
 }
+
+int TOH(int n, char x, char y, char z){
+    if(n>0){
+        
+    }
+}
 int main()
 {
     int arr[5];

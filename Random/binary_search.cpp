@@ -24,7 +24,9 @@ int binary_search(int arr[], int size, int key)
 }
 int main()
 {
-    int arr[] = {1, 2, 3, 4, 10, 23, 56, 76, 34};
-    cout << "the index of number is - " << binary_search(arr, 9, 101) << endl;
-    cout << "program ended";
-}
+    // int arr[] = {1, 2, 3, 4, 10, 23, 56, 76, 34};
+    // cout << "the index of number is - " << binary_search(arr, 9, 101) << endl;
+    // cout << "program ended";
+    {
+        return 0;
+    }

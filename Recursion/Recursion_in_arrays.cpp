@@ -44,6 +44,7 @@ int linear_search(int arr[], int size, int key)
         return index;
         return linear_search(arr + 1, size - 1, key);
     }
+    index++;
 }
 int main()
 {

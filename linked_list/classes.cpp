@@ -22,10 +22,16 @@ public:
         cout << "the salary is : " << salary << endl;
         cout << "the internal rank is : " << internalRank << endl;
     }
+    void increaseSalary()
+    {
+        this->salary += 1000;
+    }
 };
 int main()
 {
     employee raman(12000, 25);
+    raman.printInfo();
+    raman.increaseSalary();
     raman.printInfo();
     return 0;
 }

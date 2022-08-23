@@ -12,8 +12,7 @@ bool sorted_or_not(int *arr, int size)
     }
     else
     {
-        bool remaining = sorted_or_not(arr + 1, size - 1);
-        return remaining;
+        return sorted_or_not(arr + 1, size - 1);
     }
 }
 

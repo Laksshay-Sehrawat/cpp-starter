@@ -1,0 +1,10 @@
+first we have to take 3 pointers,
+prev, curr and temp
+prev starts with NULL, curr from head and temp with also random value
+
+while(curr->next!=NULL)
+temp = curr->next
+curr->next = prev
+prev->next = curr
+prev = curr
+curr = temp

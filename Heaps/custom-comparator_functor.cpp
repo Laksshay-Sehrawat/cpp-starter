@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 class car
 {
@@ -13,14 +13,39 @@ public:
         this->x = x;
         this->y = y;
     }
+    int dist()
+    {
+        return x * x + y * y;
+    }
     void print_details()
     {
-        cout << "id - " << this->id << " x -  " << this->x << " y -  " << this->y << endl;
+        cout << "ID : " << this->id << "| X :  " << this->x << "| Y :  " << this->y << endl;
     }
 };
+class carComparator
+{
+public:
+    bool operator()(car a, car b)
+    {
+        return a.dist() > b.dist();
+    }
+};
+priority_queue<car, vector<car>, carComparator> pq;
 int main()
 {
-    car c1(5, 10, 12);
-    c1.print_details();
+    int x[] = {3, 15, 1, 9, -1};
+    int y[] = {2, 0, 1, 10, 11};
+    for (int i = 0; i < 5; i++)
+    {
+        car c(i, x[i], y[i]);
+        pq.push(c);
+    }
+    while (!pq.empty())
+    {
+        car c = pq.top();
+        c.print_details();
+        pq.pop();
+    }
+
     return 0;
 }
